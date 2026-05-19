@@ -1,3 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Hanken+Grotesk:wght@700;800&display=swap');
 @import 'tailwindcss';
+
+@theme {
+  --color-primary: #9D4EDD;
+  --color-primery-hover: color-mix(in srgb, var(--color-primary) 90%, white);
+
+  --color-secondary: #240046;
+  --color-primery-hover: color-mix(in srgb, var(--color-secondary) 90%, white);
+
+  --color-tertiary: #7B2CBF;
+  --color-primery-hover: color-mix(in srgb, var(--color-tertiary) 90%, white);
+
+  --color-neutral: #0A0908;
+
+  --font-display: "Hanken Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .text-display-lg {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 768px) {
+    .text-display-lg {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  .text-headline-lg {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  .text-headline-md {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  .text-body-lg {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .text-body-md {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .text-label-md {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .text-caption {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+}
