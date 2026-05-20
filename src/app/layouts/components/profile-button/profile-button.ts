@@ -7,7 +7,7 @@ import { LucideBolt, LucideCircleUserRound, LucideLogOut, LucideUserPen } from '
   templateUrl: './profile-button.html',
 })
 export class ProfileButton {
-  isOpen = signal(true);
+  isOpen = signal(false);
 
   toggle(): void {
     this.isOpen.set(!this.isOpen());
