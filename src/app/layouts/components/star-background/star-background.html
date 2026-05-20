@@ -1,0 +1,11 @@
+<div class="space-bg">
+  <!-- Nebulosa morada -->
+  <div class="nebula"></div>
+
+  <!-- Estrellas estaticas -->
+  @for (star of stars; track star.id) {
+  <div class="star" [style.top.%]="star.top" [style.left.%]="star.left" [style.width.px]="star.size"
+    [style.height.px]="star.size" [style.opacity]="star.opacity" [style.animation-delay.s]="star.delay"
+    [style.animation-duration.s]="star.duration"></div>
+  }
+</div>
